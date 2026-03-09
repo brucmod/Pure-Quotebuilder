@@ -164,14 +164,10 @@
   .product-search {
     width: 100%; background: var(--surface2); border: 1px solid var(--border2);
     border-radius: var(--radius-sm); color: var(--text); font-family: inherit;
-    font-size: 13px; font-weight: 500; padding: 8px 34px 8px 12px; outline: none;
+    font-size: 13px; font-weight: 500; padding: 8px 12px; outline: none;
     transition: border-color .15s;
   }
   .product-search:focus { border-color: var(--accent); }
-  .search-icon {
-    position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
-    color: var(--text3); pointer-events: none;
-  }
   .dropdown-list {
     position: absolute; top: calc(100% + 4px); left: 0; right: 0;
     background: var(--surface3); border: 1px solid var(--border2);
@@ -1112,9 +1108,6 @@
       <div class="card-body">
         <div class="product-select-area">
           <div class="product-search-wrap" id="hwSearchWrap">
-            <span class="search-icon">
-              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
-            </span>
             <input class="product-search" id="hwSearch" type="text" placeholder="Search hardware by SKU or capacity…" autocomplete="off" oninput="searchProducts('hw')" onfocus="showDropdown('hw')" onblur="hideDropdown('hw',300)">
             <div class="dropdown-list" id="hwDropdown"></div>
           </div>
@@ -1145,9 +1138,6 @@
       <div class="card-body">
         <div class="product-select-area">
           <div class="product-search-wrap" id="supSearchWrap">
-            <span class="search-icon">
-              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
-            </span>
             <input class="product-search" id="supSearch" type="text" placeholder="Search support / subscription SKUs…" autocomplete="off" oninput="searchProducts('sup')" onfocus="showDropdown('sup')" onblur="hideDropdown('sup',300)">
             <div class="dropdown-list" id="supDropdown"></div>
           </div>
